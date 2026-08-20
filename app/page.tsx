@@ -78,7 +78,7 @@ const sections: Record<SectionId, React.ReactNode> = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f1e9e1]">
       <BrandHeader />
       <main>{SECTION_ORDER.map((id) => sections[id])}</main>
       <footer className="border-t border-gray-200 px-4 py-6 text-center text-sm text-gray-500">
