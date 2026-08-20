@@ -28,4 +28,14 @@ export async function proxy(request: NextRequest) {
   return response;
 }
 
-export const config = { matcher: ["/app/:path*"] };
+// Every signed-in route needs its session refreshed here. Miss one off this
+// list and that page will quietly start signing people out.
+export const config = {
+  matcher: [
+    "/app/:path*",
+    "/menu/:path*",
+    "/checkout/:path*",
+    "/orders/:path*",
+    "/kitchen/:path*",
+  ],
+};

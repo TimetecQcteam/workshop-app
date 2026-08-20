@@ -18,8 +18,9 @@ SMALL, VISIBLE in the browser, and REVERSIBLE with a single `git checkout`.
 
 ## Hard rules
 
-- NEVER edit anything under `lib/supabase/`, `app/app/`, `app/auth/`, `proxy.ts`,
-  `supabase/`, `.env*`, `package.json`, or `package-lock.json`.
+- NEVER edit anything under `lib/supabase/`, `app/actions/`, `app/app/`, `app/auth/`,
+  `app/menu/`, `app/checkout/`, `app/orders/`, `app/kitchen/`, `proxy.ts`, `supabase/`,
+  `.env*`, `package.json`, or `package-lock.json`.
 - NEVER add, remove, or update a dependency.
 - Keep each change a small diff the participant can read in one sentence.
 

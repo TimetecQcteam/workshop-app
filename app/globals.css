@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Solid fallback: the colour the backdrop resolves to, so the page never
+     flashes white before the SVG paints. */
+  --background: #f7f1e8;
+  --foreground: #1f1a15;
 }
 
 @theme inline {
@@ -13,6 +15,21 @@
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
+  background-color: var(--background);
+  /* One vector wash behind every page. `fixed` keeps it still while content
+     scrolls, which is what makes it read as a backdrop rather than a banner. */
+  background-image: url("/backdrop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Mobile browsers handle a fixed background poorly (it jumps as the address
+   bar collapses), so let it scroll with the page there instead. */
+@media (max-width: 640px) {
+  body {
+    background-attachment: scroll;
+  }
 }

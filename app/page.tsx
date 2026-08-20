@@ -7,14 +7,14 @@ import { brand } from "@/lib/config/brand";
 // Edit the words below, or reorder the sections in SECTION_ORDER.
 // ─────────────────────────────────────────────────────────────
 
-const headline = "Keep track of the stuff that matters.";
+const headline = "Good food, ordered ahead.";
 const subcopy =
-  "A private list that's yours alone. Add notes, ideas and reminders — they're saved securely and only you can see them.";
+  "Browse the menu, build your order and send it straight to the kitchen. Watch it go from received to ready without standing in line.";
 
 const howItWorks = [
   { title: "1. Create an account", text: "Sign up with just an email and a password." },
-  { title: "2. Add your items", text: "Notes, ideas, tasks — anything you want to keep." },
-  { title: "3. Come back anytime", text: "Your list is saved in the cloud, private to you." },
+  { title: "2. Build your order", text: "Add what you want from the menu, then check out." },
+  { title: "3. Watch it cook", text: "Your order updates live until it's ready to collect." },
 ];
 
 // Reorder these to change the page layout (Module 4 layout edit).
@@ -46,7 +46,7 @@ const sections: Record<SectionId, React.ReactNode> = {
       <h2 className="text-center text-2xl font-semibold">How it works</h2>
       <div className="mx-auto mt-8 grid max-w-4xl gap-6 sm:grid-cols-3">
         {howItWorks.map((step) => (
-          <div key={step.title} className="rounded-xl border border-gray-200 p-6">
+          <div key={step.title} className="rounded-2xl border border-black/5 bg-white/75 shadow-sm backdrop-blur-sm p-6">
             <h3 className="font-semibold">{step.title}</h3>
             <p className="mt-2 text-sm text-gray-600">{step.text}</p>
           </div>
@@ -56,7 +56,7 @@ const sections: Record<SectionId, React.ReactNode> = {
   ),
   cta: (
     <section key="cta" className="px-4 py-16 text-center">
-      <h2 className="text-2xl font-semibold">Ready to start?</h2>
+      <h2 className="text-2xl font-semibold">Hungry?</h2>
       <div className="mt-6 flex justify-center gap-4">
         <Link
           href="/signup"
@@ -78,10 +78,10 @@ const sections: Record<SectionId, React.ReactNode> = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#f1e9e1]">
+    <div className="min-h-screen">
       <BrandHeader />
       <main>{SECTION_ORDER.map((id) => sections[id])}</main>
-      <footer className="border-t border-gray-200 px-4 py-6 text-center text-sm text-gray-500">
+      <footer className="border-t border-black/5 px-4 py-6 text-center text-sm text-gray-500">
         {brand.name} — {brand.tagline}
       </footer>
     </div>

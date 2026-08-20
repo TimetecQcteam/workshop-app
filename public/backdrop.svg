@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <!-- Page backdrop: a soft warm gradient wash. Pure vector, so it stays
+       crisp at any size and adds no image weight to the page. -->
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fdfbf8" />
+      <stop offset="55%" stop-color="#f7f1e8" />
+      <stop offset="100%" stop-color="#eee2d4" />
+    </linearGradient>
+    <filter id="soften" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="150" />
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#base)" />
+
+  <g filter="url(#soften)">
+    <ellipse cx="250" cy="170" rx="430" ry="300" fill="#e0b168" opacity="0.30" />
+    <ellipse cx="1390" cy="230" rx="380" ry="320" fill="#d99b7c" opacity="0.22" />
+    <ellipse cx="1160" cy="910" rx="460" ry="300" fill="#b4835a" opacity="0.20" />
+    <ellipse cx="410" cy="880" rx="360" ry="260" fill="#cfa46f" opacity="0.18" />
+  </g>
+</svg>

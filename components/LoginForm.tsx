@@ -40,7 +40,7 @@ export default function LoginForm({ confirmError = false }: { confirmError?: boo
           <BackendNotConnected />
         </div>
       )}
-      <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+      <form onSubmit={handleSubmit} className="mt-6 space-y-4 rounded-2xl border border-black/5 bg-white/75 p-6 shadow-sm backdrop-blur-sm">
         <div>
           <label htmlFor="email" className="block text-sm font-medium">
             Email
